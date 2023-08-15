@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>P3 Kamal Sir- Sunny Sharma</title>
+		
+		<style>
+			*{
+				font-size: 40px;
+			}
+			body{
+				background-color:lightblue;
+			}
+		</style>
+		<script>
+			function EvenOdd(){
+				event.preventDefault();
+				let ans = document.getElementById("ans");
+				let num = document.getElementById("num");
+				if(num.value.trim()==""){
+					alert("You did not enter any integer");
+					ans.innerHTML = "";
+					num.focus();
+					return;
+				}
+				let n = parseInt(num.value);
+				let r = n % 2 == 0 ? "even" : "odd";
+				ans.innerHTML = r;
+			}
+		</script>
+	</head>
+
+	<body>
+		<br><br>
+		<center>
+			<h1>Welcome all...</h1>
+			<form onsubmit="EvenOdd()">
+				<input type="number" id="num" placeholder="Enter any integer"/>
+				<br><br>
+				<input type="submit"
+					style="background-color:yellow;
+						color:red;
+						width:50%;
+						border-radius:40px;"/>
+			</form>
+			<h1 id="ans"></h1>
+		</center>
+		
+		
+	</body>
+</html>
